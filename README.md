@@ -1,2 +1,2 @@
 # weather_app
-weather traker app
+My name is alya abdulla and this my weather traker app
