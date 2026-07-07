@@ -68,7 +68,7 @@ if add_radio=="View all observations":
 
 ### temperature trends
 if add_radio=="temperature trends":
-    df=pd.read_csv('f.csv')
+    df=pd.read_csv('Data/f.csv')
     st.write("temperature trends")
     st.line_chart(df, x="date", y="temperature")
     
@@ -130,7 +130,7 @@ if add_radio=="compare current year data with previous years":
     
 ### track and display record-breaking temperatures or conditions 
 if add_radio=="track and display record-breaking temperatures or conditions":
-    df=pd.read_csv('f.csv')
+    df=pd.read_csv('Data/f.csv')
     max_temp=df["temperature"].max()
     min_temp=df["temperature"].min()
     max_humidity=df["humidity"].max()
