@@ -10,7 +10,7 @@ import streamlit as st
 '''
 
 def Record_new_weather_observation(date,temperature,weather_condition,humidity,wind_speed):
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     new_observation = {
         "date": date,
         "temperature": temperature,
@@ -19,7 +19,7 @@ def Record_new_weather_observation(date,temperature,weather_condition,humidity,w
         "wind_speed": wind_speed}
     new_row= pd.DataFrame(new_observation,index=[len(df)])
     df = pd.concat([df, new_row], ignore_index=True)
-    df.to_csv('f.csv', index=False)
+    df.to_csv('Data/f.csv', index=False)
     return " "
 
     
@@ -30,7 +30,7 @@ def Record_new_weather_observation(date,temperature,weather_condition,humidity,w
 '''
 
 def view_weather_statistics():
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     st.subheader("the average, minimum, and maximum temperatures")
     st.write(df['temperature'].agg(['min', 'max', 'mean']))
     st.subheader("the most commonly weather condition")
@@ -43,7 +43,7 @@ def view_weather_statistics():
 '''
 
 def search_by_date(date):
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     st.subheader("this is all observations for this date",date)
     the_filter = df.date == date 
     st.write(df[the_filter])
@@ -56,7 +56,7 @@ def search_by_date(date):
 '''
 
 def view_all_observations():
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     st.subheader("All recorded weather data")
     return st.write(df)
 
@@ -67,7 +67,7 @@ Search_by_month  ---------------------------------------------------------------
 '''
 
 def Search_by_month(month):
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     df['date'] = pd.to_datetime(df['date'])
     st.write(df[df['date'].dt.month_name()==month])
     return " "
@@ -79,7 +79,7 @@ Search_by_season  --------------------------------------------------------------
 '''
 
 def Search_by_season(season):
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     df['date'] = pd.to_datetime(df['date'])
 
     # Spring months: March, April, May
@@ -108,7 +108,7 @@ compare_years-------------------------------------------------------------------
 '''
 
 def compare_years(year):
-    df=pd.read_csv("f.csv")
+    df=pd.read_csv("Data/f.csv")
     df['date'] = pd.to_datetime(df['date'])
     df["year"]=df['date'].dt.year
     
