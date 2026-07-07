@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 # weather\_app
-
 the weather traker app
-
+video link: https://youtu.be/WZBCdALelwk
+streamlit app: https://ktzpzztdyg7bkaecyzn5n5.streamlit.app/
 =======
 # weather_app
 My name is alya abdulla and this my weather traker app
