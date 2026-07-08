@@ -1,11 +1,14 @@
-<<<<<<< HEAD
+
 # weather\_app
-the weather traker app
 
-video link: https://youtu.be/WZBCdALelwk
-streamlit app: https://ktzpzztdyg7bkaecyzn5n5.streamlit.app/
+the weather app 
+weather tracker is application that monitors, displays, and forecasts tomorrow weather conditions. It aggregates data from user input. it is help user to monitor and prepare for weather conditions.
 
-=======
-# weather_app
-My name is alya abdulla and this my weather traker app
->>>>>>> c948bd22e1642be7f181e49d3940c2fcf9820bc8
+==============================================================================
+
+# video link:
+https://youtu.be/WZBCdALelwk
+
+# streamlit app:
+https://ktzpzztdyg7bkaecyzn5n5.streamlit.app/
+
